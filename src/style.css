@@ -16,6 +16,28 @@ body {
   padding: 0.5em;
 }
 
+.nav {
+  font-size: smaller;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  width: 150px;
+  background-color: rgb(224, 224, 224);
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  background-color: gray;
+}
+
 .center {
   display: flex;
   justify-content: space-between;
