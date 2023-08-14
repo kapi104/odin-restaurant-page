@@ -1,4 +1,4 @@
-  const header = () => {
+    const header = () => {
     let element = document.createElement('div');
     element.innerHTML = 'MAIN';
     element.classList.add('header');
@@ -11,7 +11,7 @@
     let links = ['main', 'menu', 'contact']
     let navLinks = ''
     for (let i = 0; i < 3; i++) {
-      navLinks = navLinks + `<a href="${links[i]}.html">${links[i]}</a>`
+      navLinks = navLinks + `<a href="" class="${links[i]}">${links[i]}</a>`
     }
     element.innerHTML = navLinks;
     return element;
@@ -36,13 +36,15 @@
     return element;
   }
 
-  const loadMain = (img, txt) => {
+  const loadMain = (firstLoad, img, txt) => {
     let content = document.querySelector('.content');
     let resImg = new Image()
     resImg.src = img;
     
-    content.appendChild(header());
-    document.querySelector('.header').appendChild(nav())
+    // if (firstLoad == true) {
+      content.appendChild(header());
+      document.querySelector('.header').appendChild(nav())
+    // }
     let centerDiv = center();
     content.appendChild(centerDiv);
     centerDiv.appendChild(sideImg()).appendChild(resImg);
@@ -50,4 +52,4 @@
   }
   
 
-  export default loadMain;
+  export {loadMain};
